@@ -19,7 +19,7 @@ in
   default = self.overlays.hyprutils;
   hyprutils = final: prev: {
     hyprutils = final.callPackage ./default.nix {
-      stdenv = final.gcc15Stdenv;
+      stdenv = final.gcc16Stdenv;
       inherit version;
     };
     hyprutils-debug = final.hyprutils.override { debug = true; };
